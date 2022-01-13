@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar.vue";
 <template>
   <div class="bg-gray-100 font-serif">
     <Navbar class="z-50"/>
-    <main class="my-12 min-h-screen">
+    <main class="min-h-screen">
       <slot />
     </main>
     <div class="relative">
