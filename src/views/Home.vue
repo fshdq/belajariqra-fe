@@ -237,6 +237,11 @@ export default {
       dataKeunggulan, dataKelebihan, dataHarga
     }
   },
+  mounted () {
+    axios
+      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(response => (this.info = response))
+  }
 }
 </script>
 <style>
