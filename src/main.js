@@ -4,6 +4,9 @@ import App from './App.vue'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
 
+import DefaultLayout from './layouts/DefaultLayout.vue'
+
+
 const app = createApp(App)
 
 const router = createRouter({
@@ -11,5 +14,6 @@ const router = createRouter({
   routes,
 })
 
+app.component('default-layout', DefaultLayout)
 app.use(router)
 app.mount('#app')
