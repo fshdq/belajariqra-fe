@@ -63,7 +63,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-gray-100">
+  <section class="bg-white py-12">
     <div class="container xl:max-w-7xl mx-auto p-4 lg:p-8">
       <div class="lg:text-center">
         <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
@@ -73,7 +73,7 @@
             Metode Iqra memiliki kelebihan dibandingkan dengan metode-metode yang sering diajarkan pada dunia pendidikan 
         </p>
       </div>
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 py-8">
+      <div class="flex flex-col gap-y-4 md:flex-row md:gap-x-4 py-4">
         <div class="flex p-6 bg-blue-100 rounded-lg gap-x-2" v-for="kelebihan in dataKelebihan" :key="kelebihan.title">
           <div class="mb-5">
             <div class="inline-flex items-center p-2 border border-transparent rounded-full shadow-sm bg-blue-500">
@@ -90,6 +90,46 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="bg-white py-12">
+    <div class="container xl:max-w-7xl mx-auto p-4 lg:p-8">
+      <div class="lg:text-center">
+        <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+            Kelebihan
+        </h3>
+        <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-700 lg:mx-auto">
+            Metode Iqra memiliki kelebihan dibandingkan dengan metode-metode yang sering diajarkan pada dunia pendidikan 
+        </p>
+      </div>
+      <div class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-3">
+        <div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200" v-for="paket in dataHarga" :key="paket.no">
+            <div class="p-6">
+                <h2 class="text-lg leading-6 font-medium text-gray-900">{{paket.nama}}</h2>
+                <p class="text-4xl font-extrabold text-gray-900 py-4">{{paket.harga}}</p>
+            </div>
+            <div class="pt-6 pb-8 px-6">
+                <h3 class="text-xs font-medium text-gray-900 tracking-wide uppercase">Detail</h3>
+                <ul role="list" class="mt-6 space-y-4">
+                    <li class="flex space-x-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" class="flex-shrink-0 h-5 w-5 text-green-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm text-gray-500"> {{paket.jam}} </span></li>
+                    <li class="flex space-x-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" class="flex-shrink-0 h-5 w-5 text-green-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm text-gray-500">{{paket.hari}}</span></li>
+                    <li class="flex space-x-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" class="flex-shrink-0 h-5 w-5 text-green-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm text-gray-500">{{paket.pertemuan}}</span></li>
+                </ul>
+            </div>
+            <div class="py-4 px-6">
+              <router-link to="/daftar" class="block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900">Daftar</router-link>
+            </div>
+        </div>
+    </div>
     </div>
   </section>
 </template>
@@ -140,11 +180,37 @@ const dataKelebihan = [
     iconBackground: 'bg-yellow-50',
   },
 ]
+const dataHarga = [
+  {
+    no: 1,
+    nama: 'Paket A',
+    harga: 'Rp. 1.250.000',
+    jam: 'Mulai Pukul 10.00-12.00',
+    hari: 'Senin dan Rabu',
+    pertemuan: '14x pertemuan',
+  },
+  {
+    no: 1,
+    nama: 'Paket B',
+    harga: 'Rp. 1.250.000',
+    jam: 'Mulai Pukul 10.00-12.00',
+    hari: 'Senin dan Rabu',
+    pertemuan: '14x pertemuan',
+  },
+  {
+    no: 1,
+    nama: 'Paket C',
+    harga: 'Rp. 1.250.000',
+    jam: 'Mulai Pukul 10.00-12.00',
+    hari: 'Senin dan Rabu',
+    pertemuan: '14x pertemuan',
+  },
+]
 
 export default {
   setup() {
     return {
-      dataKeunggulan, dataKelebihan
+      dataKeunggulan, dataKelebihan, dataHarga
     }
   },
 }
