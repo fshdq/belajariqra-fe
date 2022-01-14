@@ -200,6 +200,19 @@
   </section>
 
   <!-- TESTIMONIAL -->
+  <section class="bg-white py-12">
+    <div class="container xl:max-w-7xl mx-auto p-4 lg:p-8">
+      <div class="lg:text-center">
+        <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+            Testimoni
+        </h3>
+      </div>
+      <div class="flex py-4 justify-center">
+        <iframe width="768" height="432" src="https://www.youtube.com/embed/RUk8kKWIs_o?controls=0&amp;start=665" title="Testimoni Kimia Organik Metode Iqra" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
 </template>
 <script>
 import {
