@@ -1,7 +1,4 @@
-import Home from "./views/Home.vue";
-import About from "./views/About.vue";
 import NotFound from "./views/NotFound.vue";
-import DefaultLayout from "./layouts/DefaultLayout.vue";
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
@@ -11,7 +8,6 @@ export const routes = [
     component: () => import("@/views/Home.vue"),
     meta: { 
       title: "Home",
-      layout: "default-layout", 
     } 
   },
   {
@@ -19,9 +15,19 @@ export const routes = [
     name: "about",
     meta: {
       title: "About",
-      layout: "default-layout",
     },
     component: () => import("@/views/About.vue"),
+    // example of route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+  },
+  {
+    path: "/login",
+    name: "login",
+    meta: {
+      title: "Masuk",
+    },
+    component: () => import("@/views/Login.vue"),
     // example of route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

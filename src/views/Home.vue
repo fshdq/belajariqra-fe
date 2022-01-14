@@ -92,6 +92,7 @@
       </div>
     </div>
   </section>
+
   <section class="bg-white py-12">
     <div class="container xl:max-w-7xl mx-auto p-4 lg:p-8">
       <div class="lg:text-center">
@@ -132,6 +133,7 @@
     </div>
     </div>
   </section>
+
   <section class="bg-white py-12">
     <div class="container xl:max-w-7xl mx-auto p-4 lg:p-8">
       <div class="lg:text-center">
@@ -152,6 +154,38 @@
             <p class="block text-sm font-medium text-gray-500 pointer-events-none">{{ file.size }}</p> -->
           </li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16 sm:py-24">
+    <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+      <div class="relative rounded-2xl px-6 py-10 bg-blue-700 overflow-hidden shadow-xl sm:px-12 sm:py-20">
+        <div aria-hidden="true" class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0 opacity-25">
+          <svg class="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1440" height="560" preserveAspectRatio="none" viewBox="0 0 1440 560">
+              <g mask="url(&quot;#SvgjsMask1042&quot;)" fill="none">
+                  <rect width="1440" height="560" x="0" y="0" fill="#0e2a47"></rect>
+                  <path d="M 0,210 C 144,181.2 432,78 720,66 C 1008,54 1296,133.2 1440,150L1440 560L0 560z" fill="#184a7e"></path>
+                  <path d="M 0,348 C 96,377.6 288,490.4 480,496 C 672,501.6 768,387.8 960,376 C 1152,364.2 1344,424.8 1440,437L1440 560L0 560z" fill="#2264ab"></path>
+              </g>
+              <defs>
+                  <mask id="SvgjsMask1042">
+                      <rect width="1440" height="560" fill="#ffffff"></rect>
+                  </mask>
+              </defs>
+          </svg>
+        </div>
+        <div class="relative">
+          <div class="sm:text-center">
+            <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl"> Ingin belajar Kimia Organik? </h2>
+            <p class="mt-6 mx-auto max-w-2xl text-lg text-blue-200"> Saatnya mencoba belajar dengan menggunakan Metode Iqra </p>
+          </div>
+          <div class="mt-12 sm:mx-auto sm:max-w-lg sm:flex sm:justify-center">
+            <div class="mt-4 sm:mt-0">
+              <router-link to="/daftar" class="block text-center rounded-md border border-transparent px-5 py-3 text-blue-600 bg-white hover:bg-blue-50 text-base font-medium shadow focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"> Daftar Sekarang</router-link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
