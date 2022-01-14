@@ -22,6 +22,17 @@ export const routes = [
     // which is lazy-loaded when the route is visited.
   },
   {
+    path: "/daftar",
+    name: "daftar",
+    meta: {
+      title: "Daftar",
+    },
+    component: () => import("@/views/Daftar.vue"),
+    // example of route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+  },
+  {
     path: "/login",
     name: "login",
     meta: {

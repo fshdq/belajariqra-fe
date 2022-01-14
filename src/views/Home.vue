@@ -9,14 +9,16 @@
           <div class="text-center lg:text-left tracking-wide leading-loose">
             <h2 class="mb-5 text-3xl sm:text-4xl font-black">Belajar Kimia Organik</h2>
             <p class="mb-5">Rasakan kemudahan belajar Kimia Organik menggunakan <b>Metode Iqra</b> yang cepat, mudah dan singkat.</p>
-            <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            <router-link to="/daftar" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
               Daftar Sekarang
-            </button>
+            </router-link>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- apa itu? -->
   <section class="container mx-auto max-w-7xl px-4 sm:px-10 flex flex-col text-gray-800 ">
     <div class="flex flex-col-reverse lg:flex-row lg:items-center justify-center lg:justify-between mb-5 md:mb-10 ">
       <div class="w-full lg:w-1/2 pb-10 lg:pe-5">
@@ -30,6 +32,8 @@
       </div>
     </div>
   </section>
+
+  <!-- keunggulan -->
   <section class="bg-white py-12">
     <div class="pt-2 md:pt-0 md:px-12 lg:px-16 px-6 lg:w-4/5 lg:mx-auto leading-normal tracking-normal text-black">
       <div class="lg:text-center">
@@ -63,6 +67,8 @@
       </div>
     </div>
   </section>
+
+  <!-- Kelebihan -->
   <section class="bg-white py-12">
     <div class="container xl:max-w-7xl mx-auto p-4 lg:p-8">
       <div class="lg:text-center">
@@ -93,18 +99,19 @@
     </div>
   </section>
 
-  <section class="bg-white py-12">
+  <!-- PRICING -->
+  <section class="bg-gray-50 py-12">
     <div class="container xl:max-w-7xl mx-auto p-4 lg:p-8">
       <div class="lg:text-center">
         <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-            Kelebihan
+            Daftar Harga
         </h3>
         <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-700 lg:mx-auto">
-            Metode Iqra memiliki kelebihan dibandingkan dengan metode-metode yang sering diajarkan pada dunia pendidikan 
+            Tidak perlu biaya mahal untuk dapat memahami Kimia Organik dengan cepat
         </p>
       </div>
       <div class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-3">
-        <div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200" v-for="paket in dataHarga" :key="paket.no">
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200" v-for="paket in dataHarga" :key="paket.no">
             <div class="p-6">
                 <h2 class="text-lg leading-6 font-medium text-gray-900">{{paket.nama}}</h2>
                 <p class="text-4xl font-extrabold text-gray-900 py-4">{{paket.harga}}</p>
@@ -134,6 +141,7 @@
     </div>
   </section>
 
+  <!-- IMAGE GALERY -->
   <section class="bg-white py-12">
     <div class="container xl:max-w-7xl mx-auto p-4 lg:p-8">
       <div class="lg:text-center">
@@ -158,6 +166,7 @@
     </div>
   </section>
 
+  <!-- LAST CTA -->
   <section class="bg-white py-16 sm:py-24">
     <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
       <div class="relative rounded-2xl px-6 py-10 bg-blue-700 overflow-hidden shadow-xl sm:px-12 sm:py-20">
@@ -189,6 +198,8 @@
       </div>
     </div>
   </section>
+
+  <!-- TESTIMONIAL -->
 </template>
 <script>
 import {
