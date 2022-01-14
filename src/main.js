@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import './tailwind.css'
 import App from './App.vue'
 import { routes } from './routes.js'
-import store from './store/store.js'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import DefaultLayout from './layouts/DefaultLayout.vue'
@@ -16,6 +15,5 @@ const router = createRouter({
 })
 
 app.component('default-layout', DefaultLayout)
-app.use(store)
 app.use(router)
 app.mount('#app')
