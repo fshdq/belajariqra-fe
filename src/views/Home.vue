@@ -132,6 +132,30 @@
     </div>
     </div>
   </section>
+  <section class="bg-white py-12">
+    <div class="container xl:max-w-7xl mx-auto p-4 lg:p-8">
+      <div class="lg:text-center">
+        <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+          Kegiatan Kami
+        </h3>
+        <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-700 lg:mx-auto">
+          Kegiatan belajar mengajar yang sudah dilaksanakan
+        </p>
+      </div>
+      <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+        <li v-for="file in files" :key="file.source" class="relative">
+          <div class="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
+            <img :src="file.source" alt="" class="object-cover pointer-events-none group-hover:opacity-75" />
+            <button type="button" class="absolute inset-0 focus:outline-none">
+              <span class="sr-only">View details for {{ file.title }}</span>
+            </button>
+          </div>
+          <p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">{{ file.title }}</p>
+          <p class="block text-sm font-medium text-gray-500 pointer-events-none">{{ file.size }}</p>
+        </li>
+      </ul>
+    </div>
+  </section>
 </template>
 <script>
 import {
