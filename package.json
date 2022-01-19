@@ -8,10 +8,8 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "firebase": "^9.6.3",
     "vue": "^3.2.26",
     "vue-router": "^4.0.12",
-    "vuefire": "^2.2.5",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
