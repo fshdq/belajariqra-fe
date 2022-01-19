@@ -1,16 +1,18 @@
 <template>
-  <div id="app">
-    <component :is="layout">
-      <router-view />
+  <div id="app" class="font-serif">
+    <component :is="this.$route.meta.layout || 'div'">
+      <router-view :key="$route.fullpath" />
     </component>
   </div>
 </template>
+
 <script>
 export default {
-  computed: {
-    layout() {
-      return this.$route.meta.layout || 'default-layout'
-    }
-  }
-}
+  name: "App",
+  data() {
+    return {
+      layout: "div",
+    };
+  },
+};
 </script>
