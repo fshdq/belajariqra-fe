@@ -3,7 +3,7 @@ import './tailwind.css'
 import App from './App.vue'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
-import DefaultLayout from './layouts/DefaultLayout.vue'
+// import DefaultLayout from './layouts/DefaultLayout.vue'
 
 const app = createApp(App)
 
@@ -12,6 +12,6 @@ const router = createRouter({
   routes,
 })
 
-app.component('default-layout', DefaultLayout)
+// app.component('default-layout', DefaultLayout)
 app.use(router)
 app.mount('#app')

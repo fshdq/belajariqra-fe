@@ -7,8 +7,14 @@
     <body class="h-full">
     ```
   -->
-  <div class="min-h-full flex">
+  <div class="min-h-screen bg-white flex">
     <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+      <div class="w-1/3 py-4">
+        <router-link to="/" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <ArrowLeftIcon class="-ml-0.5 mr-2 h-4 w-4" aria-hidden="true" />
+          Kembali
+        </router-link>
+      </div>
       <div class="mx-auto w-full max-w-sm lg:w-96">
         <div>
           <img class="h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow" />
@@ -137,3 +143,12 @@
     </div>
   </div>
 </template>
+<script>
+import { ArrowLeftIcon } from '@heroicons/vue/solid'
+
+export default {
+  components: {
+    ArrowLeftIcon,
+  },
+}
+</script>

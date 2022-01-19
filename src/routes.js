@@ -1,41 +1,34 @@
 import NotFound from "./views/NotFound.vue";
+import DefaultLayout from './layouts/DefaultLayout.vue'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
-  { 
-    path: "/", 
+  {
+    path: '/',    
     name: "home",
     component: () => import("@/views/Home.vue"),
-    meta: { 
+    meta: {
       title: "Home",
-    } 
+      layout: DefaultLayout,
+    }
   },
   {
-    path: "/about",
-    name: "about",
+    path: '/kursus',    
+    name: "kursus",
+    component: () => import("@/views/Kursus.vue"),
     meta: {
-      title: "About",
-    },
-    component: () => import("@/views/About.vue"),
+      title: "Kursus",
+      layout: DefaultLayout,
+    }
   },
   {
     path: "/daftar",
     name: "daftar",
     meta: {
       title: "Daftar",
+      layout: DefaultLayout,
     },
     component: () => import("@/views/Daftar.vue"),
-    // example of route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-  },
-  {
-    path: "/signup",
-    name: "signup",
-    meta: {
-      title: "Sign Up",
-    },
-    component: () => import("@/views/SignUp.vue"),
   },
   {
     path: "/login",
@@ -44,9 +37,6 @@ export const routes = [
       title: "Masuk",
     },
     component: () => import("@/views/Login.vue"),
-    // example of route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
   },
   { path: "/:path(.*)", component: NotFound },
 ];
