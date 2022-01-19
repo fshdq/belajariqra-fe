@@ -11,55 +11,55 @@
             </p>
           </div>
           <div class="mt-5 md:mt-0 md:col-span-2">
-            <form action="#" method="POST">
+            <form @submit.prevent="submitForm">
               <div class="grid grid-cols-6 gap-6">
                 <div class="col-span-6 sm:col-span-3">
                   <label for="first-name" class="block text-sm font-medium text-gray-700">First name</label>
-                  <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                  <input type="text" name="first-name" id="first-name" autocomplete="given-name" v-model="firstName"
                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                 </div>
 
                 <div class="col-span-6 sm:col-span-3">
                   <label for="last-name" class="block text-sm font-medium text-gray-700">Last name</label>
-                  <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                  <input type="text" name="last-name" id="last-name" autocomplete="family-name" v-model="lastName"
                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                 </div>
 
                 <div class="col-span-6 sm:col-span-4">
                   <label for="email-address" class="block text-sm font-medium text-gray-700">Email address</label>
-                  <input type="text" name="email-address" id="email-address" autocomplete="email"
+                  <input type="text" name="email-address" id="email-address" autocomplete="email" v-model="email"
                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                 </div>
 
                 <div class="col-span-6 sm:col-span-4">
                   <label for="no_telp" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                  <input type="text" name="no_telp" id="no_telp" autocomplete="email"
+                  <input type="text" name="no_telp" id="no_telp" autocomplete="email" v-model="phoneNumber"
                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                 </div>
 
                 <div class="col-span-6 sm:col-span-3">
-                  <label for="country" class="block text-sm font-medium text-gray-700">Paket</label>
-                  <select id="country" name="country" autocomplete="country-name"
+                  <label for="paket" class="block text-sm font-medium text-gray-700">Paket</label>
+                  <select id="paket" name="paket" autocomplete="paket" v-model="paket"
                     class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                    <option>Paket A</option>
-                    <option>Paket B</option>
-                    <option>Paket C</option>
+                    <option value="Paket A">Paket A</option>
+                    <option value="Paket B">Paket B</option>
+                    <option value="Paket C">Paket C</option>
                   </select>
                 </div>
 
                 <div class="col-span-6 sm:col-span-3">
-                  <label for="country" class="block text-sm font-medium text-gray-700">Pekerjaan</label>
-                  <select id="country" name="country" autocomplete="country-name"
+                  <label for="job" class="block text-sm font-medium text-gray-700">Pekerjaan</label>
+                  <select id="job" name="job" autocomplete="job" v-model="job"
                     class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                    <option>Pelajar</option>
-                    <option>Mahasiswa</option>
-                    <option>Umum</option>
+                    <option value="Pelajar">Pelajar</option>
+                    <option value="Mahasiswa">Mahasiswa</option>
+                    <option value="Umum">Umum</option>
                   </select>
                 </div>
 
                 <div class="col-span-6">
                   <label for="street-address" class="block text-sm font-medium text-gray-700">Street address</label>
-                  <textarea type="text" name="street-address" id="street-address" autocomplete="street-address"
+                  <textarea type="text" name="street-address" id="street-address" autocomplete="street-address" v-model="address"
                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                 </div>
               </div>
@@ -73,7 +73,7 @@
           class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
           Cancel
         </button>
-        <button type="submit"
+        <button type="submit" @click="publishForm"
           class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
           Simpan
         </button>
@@ -82,3 +82,26 @@
     <!-- /End replace -->
   </div>
 </template>
+<script>
+export default {
+  name: "Daftar",
+  data(){
+    return {
+      firstName: null,
+      lastName: null,
+      email: null,
+      phoneNumber: null,
+      paket: null,
+      job: null,
+      address: null,
+      formPending: null
+    }
+  },
+
+  methods: {
+    publishForm() {
+      this.formPending = true;
+    },
+  }
+}
+</script>
