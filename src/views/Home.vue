@@ -110,7 +110,7 @@
             Tidak perlu biaya mahal untuk dapat memahami Kimia Organik dengan cepat
         </p>
       </div>
-      <div class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-3">
+      <div class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-4">
         <div class="bg-white border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200" v-for="paket in dataHarga" :key="paket.no">
             <div class="p-6">
                 <h2 class="text-lg leading-6 font-medium text-gray-900">{{paket.nama}}</h2>
@@ -131,6 +131,10 @@
                             stroke="currentColor" class="flex-shrink-0 h-5 w-5 text-green-500">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg><span class="text-sm text-gray-500">{{paket.pertemuan}}</span></li>
+                        <li class="flex space-x-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" class="flex-shrink-0 h-5 w-5 text-green-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg><span class="text-sm text-gray-500">{{paket.kapasitas}} Orang</span></li>
                 </ul>
             </div>
             <div class="py-4 px-6">
@@ -266,26 +270,38 @@ const dataHarga = [
   {
     no: 1,
     nama: 'Paket A',
-    harga: 'Rp. 1.250.000',
-    jam: 'Mulai Pukul 10.00-12.00',
-    hari: 'Senin dan Rabu',
+    harga: 'Rp. 500.000',
+    jam: '9.00-11.00',
+    hari: 'Senin & Rabu',
     pertemuan: '14x pertemuan',
+    kapasitas: 15
   },
   {
-    no: 1,
+    no: 2,
     nama: 'Paket B',
-    harga: 'Rp. 1.250.000',
-    jam: 'Mulai Pukul 10.00-12.00',
+    harga: 'Rp. 500.000',
+    jam: '15.30-17.30',
     hari: 'Senin dan Rabu',
     pertemuan: '14x pertemuan',
+    kapasitas: 15
   },
   {
-    no: 1,
+    no: 3,
     nama: 'Paket C',
-    harga: 'Rp. 1.250.000',
-    jam: 'Mulai Pukul 10.00-12.00',
-    hari: 'Senin dan Rabu',
+    harga: 'Rp. 500.000',
+    jam: '9.00-11.00',
+    hari: 'Selasa dan Kamis',
     pertemuan: '14x pertemuan',
+    kapasitas: 15
+  },
+  {
+    no: 4,
+    nama: 'Paket D',
+    harga: 'Rp. 500.000',
+    jam: '15.30-17.30',
+    hari: 'Selasa dan Kamis',
+    pertemuan: '14x pertemuan',
+    kapasitas: 15
   },
 ]
 
